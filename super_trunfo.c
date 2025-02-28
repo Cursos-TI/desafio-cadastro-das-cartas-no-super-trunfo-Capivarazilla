@@ -46,8 +46,8 @@ int main(){
     densidade_popc2 = populacaoc2 / areac2;
     pib_capitac1 = (pibc1 * 1000000000) / (double) populacaoc1;
     pib_capitac2 = (pibc2 * 1000000000) / (double) populacaoc2;
-    float super_poderc1 = (float) populacaoc1 + (float) areac1 + (float) pibc1 + (float) turismoc1 + (float) pib_capitac1 + (float) (densidade_popc1 * -1);
-    float super_poderc2 = (float) populacaoc2 + (float) areac2 + (float) pibc2 + (float) turismoc2 + (float) pib_capitac2 + (float) (densidade_popc2 * -1);
+    float super_poderc1 = (float) populacaoc1 + (float) areac1 + (float) pibc1 + (float) turismoc1 + (float) pib_capitac1 + (float) (1/densidade_popc1);
+    float super_poderc2 = (float) populacaoc2 + (float) areac2 + (float) pibc2 + (float) turismoc2 + (float) pib_capitac2 + (float) (1/densidade_popc2);
     
     //Início do menu interativo para escolha do primeiro atributo a ser comparado
     printf("Agora iniciaremos a comparação de cartas. Digite a seguir o primeiro atributo a ser comparado:\n");
@@ -258,13 +258,16 @@ int main(){
         resultado2 += super_poderc2;
         break;
     }
+
+    //Cálculo e amostragem dos valores das somas dos atributos comparados para o usuário
     printf("Soma dos atributos selecionados para a Carta 1: %.2lf\n", resultado1);
     printf("Soma dos atributos selecionados para a Carta 2: %.2lf\n", resultado2);
     if (resultado1 > resultado2)
         printf("Carta 1 ganhou na soma!\n");
-    else
+    else if (resultado1 < resultado2)
         printf("Carta 2 ganhou na soma!\n");
-    
+    else
+        printf("Empate na soma e na rodada!\n");
 
 
 
