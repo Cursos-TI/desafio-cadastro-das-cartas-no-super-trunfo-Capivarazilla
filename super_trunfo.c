@@ -99,7 +99,7 @@ int main(){
     switch (selecao1)
     {
     case 1:
-        printf("População - Carta 1: %d //VS// Carta 2: %d\n", populacaoc1, populacaoc2);
+        printf("População - Carta 1: %lu //VS// Carta 2: %lu\n", populacaoc1, populacaoc2);
         if (populacaoc1 > populacaoc2)
             printf("Vencedor: Carta 1\n");
         else if (populacaoc1 < populacaoc2)
@@ -181,7 +181,7 @@ int main(){
     switch (selecao2)
     {
     case 1:
-        printf("População - Carta 1: %d //VS// Carta 2: %d\n", populacaoc1, populacaoc2);
+        printf("População - Carta 1: %lu //VS// Carta 2: %lu\n", populacaoc1, populacaoc2);
         if (populacaoc1 > populacaoc2)
             printf("Vencedor: Carta 1\n");
         else if (populacaoc1 < populacaoc2)
